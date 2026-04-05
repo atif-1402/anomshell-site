@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Install — anomshell</title>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<div id="page-body">
+  <div class="content-area">
+    <h2 class="section-title"><span class="nf">&#xf0ed;</span> Installation</h2>
+    <p class="section-sub">Step-by-step setup guide for anomshell on an Omarchy system.</p>
+    <div class="callout callout-warn">
+      <span class="nf">&#xf071;</span>
+      <div>This setup <strong>modifies your Hyprland configuration</strong>. Backup your configs before continuing. Do <strong>not</strong> blindly overwrite configs unless you know what you are doing.</div>
+    </div>
+    <div class="step">
+      <div class="step-num">1</div>
+      <div class="step-body">
+        <h3><span class="nf">&#xf487;</span> Install dependencies</h3>
+        <p>Install all required packages via pacman:</p>
+        <pre><code>sudo pacman -S --needed quickshell cava cliphist wl-clipboard imagemagick jq</code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <div class="step-body">
+        <h3><span class="nf">&#xf126;</span> Clone the repository</h3>
+        <pre><code>git clone https://github.com/atif-1402/anomshell.git
+cd anomshell</code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <div class="step-body">
+        <h3><span class="nf">&#xf187;</span> Backup existing config (recommended)</h3>
+        <pre><code>cp -r ~/.config/quickshell ~/.config/quickshell.backup 2>/dev/null
+cp ~/.config/hypr/bindings.conf ~/.config/hypr/bindings.conf.backup 2>/dev/null</code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <div class="step-body">
+        <h3><span class="nf">&#xf115;</span> Install Quickshell config</h3>
+        <pre><code>cp -r config/quickshell ~/.config/</code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">5</div>
+      <div class="step-body">
+        <h3><span class="nf">&#xf11c;</span> Install keybinds (manual merge recommended)</h3>
+        <p>Open <code>config/hypr/bindings.conf</code> and manually paste the Quickshell binds at the end of your <code>~/.config/hypr/bindings.conf</code>. This avoids breaking existing keybind setups.</p>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">6</div>
+      <div class="step-body">
+        <h3><span class="nf">&#xf489;</span> Install helper scripts</h3>
+        <pre><code>cp local/bin/* ~/.local/bin/
+chmod +x ~/.local/bin/qs.sh
+chmod +x ~/.local/bin/wb-kill.sh</code></pre>
+      </div>
+    </div>
+    <div class="step">
+      <div class="step-num">7</div>
+      <div class="step-body">
+        <h3><span class="nf">&#xf135;</span> Start Quickshell</h3>
+        <p>Run the start script or use the keybind after reloading Hyprland:</p>
+        <pre><code>~/.local/bin/qs.sh</code></pre>
+        <p>Or press <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>Q</kbd></p>
+      </div>
+    </div>
+    <div class="divider"></div>
+    <h3 class="sub-h"><span class="nf" style="color:var(--red)">&#xf188;</span> Troubleshooting</h3>
+    <pre><code># Verify quickshell runs
+quickshell
+
+# Check IPC
+quickshell ipc list
+
+# Verify scripts exist
+ls -l ~/.local/bin</code></pre>
+    <p style="font-size:0.86rem;margin-top:0.75rem">Make sure <code>~/.local/bin</code> is in your <code>$PATH</code>. Restart Hyprland if binds don't take effect.</p>
+  </div>
+</div>
+<script src="../assets/js/main.js"></script>
+<script>initPage('install', false);</script>
+</body>
+</html>

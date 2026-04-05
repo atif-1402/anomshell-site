@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — anomshell</title>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<div id="page-body">
+  <div class="content-area">
+    <h2 class="section-title"><span class="nf">&#xf128;</span> FAQ</h2>
+    <p class="section-sub">Frequently asked questions about anomshell.</p>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-left"><span class="nf">&#xf128;</span> Does anomshell work without Omarchy?</div>
+        <span class="faq-chevron">&#xe0b1;</span>
+      </div>
+      <div class="faq-a">anomshell is designed specifically for Omarchy setups and depends on Omarchy scripts and tooling. It may partially work without Omarchy, but you will need to troubleshoot missing components yourself.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-left"><span class="nf">&#xf188;</span> Why is it in Alpha?</div>
+        <span class="faq-chevron">&#xe0b1;</span>
+      </div>
+      <div class="faq-a">Anomshell started as a personal customization and learning project. While fully functional for daily use, expect occasional bugs or rough edges. Please report issues with logs and screenshots.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-left"><span class="nf">&#xf0ed;</span> How do I update anomshell?</div>
+        <span class="faq-chevron">&#xe0b1;</span>
+      </div>
+      <div class="faq-a">Pull the latest changes with <code>git pull</code> in the cloned directory, then re-copy the config files as in the install steps. Always backup your existing config first.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-left"><span class="nf">&#xf11c;</span> The keybinds aren't working after install.</div>
+        <span class="faq-chevron">&#xe0b1;</span>
+      </div>
+      <div class="faq-a">Make sure <code>~/.local/bin</code> is in your <code>$PATH</code>, then restart Hyprland. Verify by running <code>quickshell</code> directly from the terminal.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-left"><span class="nf">&#xf303;</span> Can I use a different compositor?</div>
+        <span class="faq-chevron">&#xe0b1;</span>
+      </div>
+      <div class="faq-a">anomshell is built for Hyprland (via Omarchy). Keybinds and certain modules are Hyprland-specific. Using it on other Wayland compositors would require significant rework.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-left"><span class="nf">&#xf0c9;</span> How do I switch bar position or style?</div>
+        <span class="faq-chevron">&#xe0b1;</span>
+      </div>
+      <div class="faq-a">Open the Settings panel with <kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd>. Under the "Bar" section you can switch between layouts and positions. Changes apply live instantly.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        <div class="faq-q-left"><span class="nf">&#xf09b;</span> How do I report a bug?</div>
+        <span class="faq-chevron">&#xe0b1;</span>
+      </div>
+      <div class="faq-a">Open an issue on the <a href="https://github.com/atif-1402/anomshell/issues" target="_blank">GitHub Issues</a> page. Please include relevant logs and screenshots so the bug can be fixed quickly.</div>
+    </div>
+  </div>
+</div>
+<script src="../assets/js/main.js"></script>
+<script>initPage('faq', false);</script>
+</body>
+</html>

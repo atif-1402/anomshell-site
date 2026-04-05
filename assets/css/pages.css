@@ -1,0 +1,327 @@
+/* ═══════════════════════════════════════════════
+   pages.css — page-specific styles
+   (hero, showcase grid, media player)
+   ═══════════════════════════════════════════════ */
+
+/* ── Hero (index.html) ────────────────────────── */
+.hero {
+  text-align: center;
+  padding: 4rem 0 3rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: var(--accent-dim);
+  border: 1px solid rgba(124, 106, 245, 0.22);
+  color: var(--accent2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  font-family: var(--mono);
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  background: linear-gradient(135deg, var(--text) 0%, var(--accent2) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.hero-title {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 1rem;
+  background:
+    radial-gradient(120% 120% at 20% 20%, rgba(160, 148, 255, 0.95) 0%, rgba(160, 148, 255, 0) 55%),
+    radial-gradient(120% 120% at 80% 80%, rgba(124, 106, 245, 0.95) 0%, rgba(124, 106, 245, 0) 58%),
+    linear-gradient(120deg, #eceefe 8%, #b8afff 48%, #8f80ff 100%);
+  background-size: 180% 180%, 180% 180%, 200% 200%;
+  background-position: 0% 50%, 100% 50%, 0% 50%;
+  animation: titleFlow 11s ease-in-out infinite;
+  text-shadow:
+    0 0 14px rgba(124, 106, 245, 0.12),
+    0 0 28px rgba(124, 106, 245, 0.07);
+}
+
+.hero-title::before {
+  content: attr(data-title);
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  color: rgba(160, 148, 255, 0.22);
+  filter: blur(12px);
+  transform: translateY(3px) scale(1.015);
+  animation: titleSmoke 9s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.hero-sub {
+  font-size: 1.1rem;
+  color: var(--text2);
+  max-width: 490px;
+  margin: 0 auto 2.4rem;
+  line-height: 1.65;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-screenshot {
+  margin: 3rem auto 0;
+  max-width: 100%;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border2);
+  background: var(--bg3);
+}
+
+.hero-screenshot img,
+.hero-screenshot video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hero-screenshot-placeholder {
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: var(--text3);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+  background: linear-gradient(135deg, var(--bg3), var(--bg4));
+}
+.hero-screenshot-placeholder .nf { font-size: 3.5rem; opacity: 0.2; }
+
+/* ── Showcase grid ────────────────────────────── */
+.showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.showcase-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+.showcase-card:hover {
+  border-color: var(--accent);
+  transform: translateY(-2px);
+}
+
+.showcase-card-featured {
+  grid-column: 1 / -1;
+}
+
+/* ── Showcase media area ──────────────────────── */
+.showcase-media {
+  position: relative;
+  width: 100%;
+  background: var(--bg4);
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.showcase-media-featured {
+  aspect-ratio: 16 / 9;
+}
+
+/* image inside card */
+.showcase-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.showcase-card:hover .showcase-media img { transform: scale(1.03); }
+
+/* video inside card */
+.showcase-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* placeholder when no media yet */
+.showcase-media-placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--mono);
+  font-size: 0.77rem;
+  color: var(--text3);
+  background: linear-gradient(135deg, var(--bg4), var(--surface));
+  min-height: 180px;
+}
+.showcase-media-placeholder .nf { font-size: 2.4rem; opacity: 0.3; }
+
+/* play button overlay on video cards */
+.showcase-media .play-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.showcase-card:hover .play-overlay { opacity: 1; }
+.play-overlay .nf { font-size: 2.5rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+
+/* video type badge */
+.media-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: rgba(0, 0, 0, 0.65);
+  color: #fff;
+  font-size: 0.68rem;
+  font-family: var(--mono);
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  backdrop-filter: blur(4px);
+}
+
+.showcase-card-body {
+  padding: 0.85rem 1rem;
+}
+.showcase-card-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 2px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.showcase-card-title .nf { color: var(--accent2); font-size: 0.9rem; }
+.showcase-card-desc { font-size: 0.78rem; color: var(--text3); }
+
+/* ── Lightbox / fullscreen viewer ─────────────── */
+.lightbox {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.92);
+  z-index: 200;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+.lightbox.open { display: flex; }
+
+.lightbox-inner {
+  position: relative;
+  max-width: 1100px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lightbox-inner img,
+.lightbox-inner video {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: var(--radius);
+  display: block;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: -2.5rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: rgba(255,255,255,0.7);
+  cursor: pointer;
+  font-family: var(--nf);
+  font-size: 1.5rem;
+  line-height: 1;
+  transition: color 0.2s;
+}
+.lightbox-close:hover { color: #fff; }
+
+.lightbox-caption {
+  margin-top: 1rem;
+  color: rgba(255,255,255,0.6);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+/* close on click outside */
+.lightbox { cursor: pointer; }
+.lightbox-inner { cursor: default; }
+
+@keyframes titleFlow {
+  0% {
+    background-position: 0% 50%, 100% 50%, 0% 50%;
+  }
+  50% {
+    background-position: 55% 45%, 45% 55%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%, 100% 50%, 0% 50%;
+  }
+}
+
+@keyframes titleSmoke {
+  0%, 100% {
+    opacity: 0.5;
+    transform: translateY(4px) scale(1.02);
+  }
+  50% {
+    opacity: 0.75;
+    transform: translateY(2px) scale(1.035);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .hero-title::before {
+    animation: none;
+  }
+}
+
+/* ── Mobile adjustments ───────────────────────── */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.4rem; }
+  .showcase-grid { grid-template-columns: 1fr; }
+}

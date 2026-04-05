@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Showcase — anomshell</title>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+
+<div id="page-body">
+  <div class="content-area">
+
+    <h2 class="section-title"><span class="nf">&#xf03e;</span> Showcase</h2>
+    <p class="section-sub">
+      A free gallery for anything you want to show.
+      Click any item to open fullscreen.
+    </p>
+
+    <!-- ╔══════════════════════════════════════════════════════════╗
+         ║  HOW TO ADD YOUR MEDIA                                  ║
+         ║                                                          ║
+         ║  1. Drop files into /showcase/ folder at site root      ║
+         ║     e.g.  showcase/bar.png                              ║
+         ║           showcase/launcher.mp4                          ║
+         ║                                                          ║
+         ║  2. SCREENSHOT card — replace placeholder div with:     ║
+         ║     <img src="../showcase/bar.png" alt="Bar"            ║
+         ║          loading="lazy">                                 ║
+         ║                                                          ║
+         ║  3. VIDEO card — replace placeholder div with:          ║
+         ║     <video src="../showcase/osd.mp4"                    ║
+         ║            muted loop playsinline                        ║
+         ║            onmouseenter="this.play()"                   ║
+         ║            onmouseleave="this.pause()"></video>          ║
+         ║     <div class="play-overlay">                          ║
+         ║       <span class="nf">&#xf144;</span></div>            ║
+         ║     <div class="media-badge">                           ║
+         ║       <span class="nf">&#xf04b;</span> video</div>      ║
+         ╚══════════════════════════════════════════════════════════╝ -->
+
+    <div class="showcase-grid">
+
+      <!-- Full demo — top featured card -->
+      <div class="showcase-card showcase-card-featured">
+        <div class="showcase-media showcase-media-featured"
+             onclick="openLightbox('../showcase/preview.mp4','video','Full anomshell preview')">
+          <!-- VIDEO: -->
+          <video src="../showcase/preview.mp4" muted loop playsinline
+                 onmouseenter="this.play()" onmouseleave="this.pause()"></video>
+          <div class="play-overlay"><span class="nf">&#xf144;</span></div>
+          <div class="media-badge"><span class="nf">&#xf04b;</span> video</div>
+        </div>
+      </div>
+
+      <div class="showcase-card">
+        <div class="showcase-media"
+             onclick="openLightbox('../showcase/showcase1.png','image','Showcase image')">
+          <img src="../showcase/showcase1.png" alt="Showcase media" loading="lazy">
+        </div>
+      </div>
+
+      <div class="showcase-card">
+        <div class="showcase-media"
+             onclick="openLightbox('../showcase/showcase2.png','image','Showcase image')">
+          <img src="../showcase/showcase2.png" alt="Showcase media" loading="lazy">
+        </div>
+      </div>
+
+      <div class="showcase-card">
+        <div class="showcase-media"
+             onclick="openLightbox('../showcase/showcase3.png','image','Showcase image')">
+          <img src="../showcase/showcase3.png" alt="Showcase media" loading="lazy">
+        </div>
+      </div>
+
+      <div class="showcase-card">
+        <div class="showcase-media"
+             onclick="openLightbox('../showcase/showcase4.png','image','Showcase image')">
+          <img src="../showcase/showcase4.png" alt="Showcase media" loading="lazy">
+        </div>
+      </div>
+
+</div>
+
+<script src="../assets/js/main.js"></script>
+<script>initPage('showcase', false);</script>
+</body>
+</html>

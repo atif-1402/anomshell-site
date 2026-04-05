@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Configuration — anomshell</title>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<div id="page-body">
+  <div class="content-area">
+    <h2 class="section-title"><span class="nf">&#xf013;</span> Configuration</h2>
+    <p class="section-sub">Most configuration is done through the live Settings panel. For deeper tweaks, config files live under <code>~/.config/quickshell/</code>.</p>
+    <div class="callout callout-info">
+      <span class="nf">&#xf013;</span>
+      <div>The Settings panel (<kbd>Super</kbd> + <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>Space</kbd>) handles most common tweaks without touching any files. Use it as your first stop.</div>
+    </div>
+    <h3 class="sub-h"><span class="nf">&#xf00c;</span> What you can configure via Settings UI</h3>
+    <ul class="feature-items" style="margin-bottom:1.5rem">
+      <li>Bar layout and screen position (top / bottom)</li>
+      <li>Bar visual style</li>
+      <li>OSD overlay position</li>
+      <li>Launcher logo and icon</li>
+      <li>Workspace numbering and visual style</li>
+      <li>Dock & Widgets behavior</li>
+      <li>General shell behavior</li>
+    </ul>
+    <h3 class="sub-h"><span class="nf">&#xf15b;</span> Manual config files</h3>
+    <p style="font-size:0.86rem;margin-bottom:0.75rem">For deeper customization, the Quickshell config is at:</p>
+    <pre><code>~/.config/quickshell/</code></pre>
+    <p style="font-size:0.86rem;margin-top:1rem;margin-bottom:0.5rem">Hyprland keybinds are in:</p>
+    <pre><code>~/.config/hypr/bindings.conf</code></pre>
+  </div>
+</div>
+<script src="../assets/js/main.js"></script>
+<script>initPage('config', false);</script>
+</body>
+</html>

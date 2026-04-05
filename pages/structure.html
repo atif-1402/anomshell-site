@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Folder Structure — anomshell</title>
+<link rel="stylesheet" href="../assets/css/base.css">
+<link rel="stylesheet" href="../assets/css/nav.css">
+<link rel="stylesheet" href="../assets/css/components.css">
+<link rel="stylesheet" href="../assets/css/pages.css">
+</head>
+<body>
+<div id="page-body">
+  <div class="content-area">
+    <h2 class="section-title"><span class="nf">&#xf115;</span> Folder Structure</h2>
+    <p class="section-sub">How the anomshell repository is organized.</p>
+    <pre class="tree">
+<span class="dir">anomshell/</span>
+├── <span class="dir">anomshell/</span>          <span class="comment"># Main Folder</span>
+├── <span class="dir">config/</span>
+│   ├── <span class="dir">hypr/</span>
+│   │   └── bindings.conf   <span class="comment"># Hyprland keybinds</span>
+│   └── <span class="dir">quickshell/</span>      <span class="comment"># Quickshell config files</span>
+│
+├── <span class="dir">local/</span>
+│   └── <span class="dir">bin/</span>
+│       ├── qs.sh           <span class="comment"># Start script</span>
+│       └── wb-kill.sh      <span class="comment"># Kill script</span>
+│
+├── LICENSE              <span class="comment"># MIT License</span>
+└── README.md            <span class="comment"># Documentation</span>
+    </pre>
+
+    <h3 class="sub-h"><span class="nf">&#xf121;</span> Languages</h3>
+    <div class="lang-pills">
+      <div class="lang-pill"><span class="nf" style="color:var(--accent2)">&#xf031;</span> <strong style="color:var(--accent2)">QML</strong> <span style="color:var(--text3)">99.8%</span></div>
+      <div class="lang-pill"><span class="nf" style="color:var(--green)">&#xf489;</span> <strong style="color:var(--green)">Shell</strong> <span style="color:var(--text3)">0.2%</span></div>
+    </div>
+  </div>
+</div>
+<script src="../assets/js/main.js"></script>
+<script>initPage('structure', false);</script>
+</body>
+</html>

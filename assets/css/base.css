@@ -1,0 +1,177 @@
+/* ═══════════════════════════════════════════════
+   base.css — CSS variables, reset, typography
+   ═══════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://cdn.jsdelivr.net/npm/@fontsource/symbols-nerd-font@5.0.15/index.css');
+
+/* ── Dark theme (default) ─────────────────────── */
+:root {
+  --bg:         #0c0e13;
+  --bg2:        #12141c;
+  --bg3:        #191c27;
+  --bg4:        #20243a;
+  --surface:    #1d2133;
+  --border:     rgba(255, 255, 255, 0.07);
+  --border2:    rgba(255, 255, 255, 0.13);
+  --text:       #e8eaf2;
+  --text2:      #9298b0;
+  --text3:      #555c78;
+
+  --accent:     #7c6af5;
+  --accent2:    #a094ff;
+  --accent-dim: rgba(124, 106, 245, 0.14);
+
+  --green:      #4ade80;
+  --green-dim:  rgba(74, 222, 128, 0.11);
+  --amber:      #f59e0b;
+  --amber-dim:  rgba(245, 158, 11, 0.11);
+  --red:        #f87171;
+  --red-dim:    rgba(248, 113, 113, 0.11);
+  --teal:       #2dd4bf;
+  --teal-dim:   rgba(45, 212, 191, 0.11);
+  --pink:       #f472b6;
+  --pink-dim:   rgba(244, 114, 182, 0.11);
+
+  --font:       'Outfit', sans-serif;
+  --mono:       'JetBrains Mono', monospace;
+  --nf:         'Symbols Nerd Font', 'JetBrains Mono', monospace;
+
+  --sidebar-w:  262px;
+  --nav-h:      56px;
+  --radius:     10px;
+  --radius-sm:  6px;
+  --radius-lg:  14px;
+}
+
+/* ── Light theme ──────────────────────────────── */
+[data-theme="light"] {
+  --bg:         #f2f4f9;
+  --bg2:        #ffffff;
+  --bg3:        #eaecf4;
+  --bg4:        #dde0ef;
+  --surface:    #ffffff;
+  --border:     rgba(0, 0, 0, 0.07);
+  --border2:    rgba(0, 0, 0, 0.13);
+  --text:       #181b2c;
+  --text2:      #4a5070;
+  --text3:      #8892b0;
+
+  --accent:     #6254e8;
+  --accent2:    #7c6af5;
+  --accent-dim: rgba(98, 84, 232, 0.10);
+
+  --green:      #16a34a;
+  --green-dim:  rgba(22, 163, 74, 0.10);
+  --amber:      #d97706;
+  --amber-dim:  rgba(217, 119, 6, 0.10);
+  --red:        #dc2626;
+  --red-dim:    rgba(220, 38, 38, 0.10);
+  --teal:       #0d9488;
+  --teal-dim:   rgba(13, 148, 136, 0.10);
+  --pink:       #db2777;
+  --pink-dim:   rgba(219, 39, 119, 0.10);
+}
+
+/* ── Reset ────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 15px;
+  line-height: 1.7;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* ── Typography ───────────────────────────────── */
+h1, h2, h3, h4 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--text);
+}
+
+p { color: var(--text2); }
+
+a { color: var(--accent2); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+strong { color: var(--text); font-weight: 600; }
+
+/* ── Inline code ──────────────────────────────── */
+code {
+  font-family: var(--mono);
+  font-size: 0.84em;
+  background: var(--bg4);
+  padding: 2px 7px;
+  border-radius: 4px;
+  color: var(--accent2);
+}
+
+pre {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.1rem 1.4rem; /* top padding reserves space for copy btn */
+  overflow-x: auto;
+  margin: 1rem 0;
+  position: relative;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.88em;
+  color: var(--text2);
+}
+
+/* ── Nerd Font icon helper ────────────────────── */
+.nf {
+  font-family: var(--nf);
+  font-style: normal;
+  font-size: 1em;
+  line-height: 1;
+  display: inline-block;
+  vertical-align: middle;
+  font-variant-ligatures: none;
+  -webkit-font-feature-settings: "liga" 0;
+  font-feature-settings: "liga" 0;
+}
+.nf-sm { font-size: 0.82em; }
+.nf-lg { font-size: 1.25em; }
+.nf-xl { font-size: 1.6em;  }
+
+/* ── Utility ──────────────────────────────────── */
+.divider {
+  height: 1px;
+  background: var(--border);
+  margin: 2.4rem 0;
+}
+
+/* ── Scrollbar ────────────────────────────────── */
+::-webkit-scrollbar        { width: 6px; height: 6px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { background: var(--border2); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--text3); }
+
+/* ── Animations ───────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+.page-content { animation: fadeUp 0.28s ease both; }

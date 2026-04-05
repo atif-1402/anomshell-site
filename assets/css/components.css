@@ -1,0 +1,168 @@
+/* ═══════════════════════════════════════════════
+   components.css — buttons, pills, cards,
+   callouts, kbd, steps, tables, FAQ, credits
+   ═══════════════════════════════════════════════ */
+
+/* ── Buttons ──────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 22px; border-radius: var(--radius);
+  font-family: var(--font); font-size: 0.9rem; font-weight: 500;
+  cursor: pointer; transition: all 0.2s; border: none;
+  text-decoration: none; line-height: 1; white-space: nowrap;
+}
+.btn:hover { text-decoration: none; transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent2); color: #fff; }
+.btn-ghost { background: var(--bg3); color: var(--text); border: 1px solid var(--border2); }
+.btn-ghost:hover { background: var(--bg4); color: var(--text); }
+.btn-sm { padding: 7px 14px; font-size: 0.82rem; }
+
+/* ── Feature pills ────────────────────────────── */
+.feat-pills { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin: 2.5rem 0; }
+.pill { padding: 7px 15px; border-radius: 20px; font-size: 0.83rem; font-weight: 500; border: 1px solid; display: inline-flex; align-items: center; gap: 7px; }
+.pill .nf { font-size: 0.95rem; }
+.pill-purple { background: var(--accent-dim); border-color: rgba(124,106,245,0.2); color: var(--accent2); }
+.pill-green  { background: var(--green-dim);  border-color: rgba(74,222,128,0.2);  color: var(--green);  }
+.pill-teal   { background: var(--teal-dim);   border-color: rgba(45,212,191,0.2);  color: var(--teal);   }
+.pill-amber  { background: var(--amber-dim);  border-color: rgba(245,158,11,0.2);  color: var(--amber);  }
+.pill-pink   { background: var(--pink-dim);   border-color: rgba(244,114,182,0.2); color: var(--pink);   }
+.pill-red    { background: var(--red-dim);    border-color: rgba(248,113,113,0.2); color: var(--red);    }
+
+/* ── Callout boxes ────────────────────────────── */
+.callout { border-radius: var(--radius); padding: 1rem 1.2rem; margin: 1.4rem 0; display: flex; gap: 10px; align-items: flex-start; font-size: 0.875rem; }
+.callout .nf { font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
+.callout-warn   { background: var(--amber-dim);  border: 1px solid rgba(245,158,11,0.25);  color: var(--amber);  }
+.callout-info   { background: var(--accent-dim); border: 1px solid rgba(124,106,245,0.22); color: var(--accent2);}
+.callout-tip    { background: var(--green-dim);  border: 1px solid rgba(74,222,128,0.22);  color: var(--green);  }
+.callout-danger { background: var(--red-dim);    border: 1px solid rgba(248,113,113,0.22); color: var(--red);    }
+
+/* ── Feature cards ────────────────────────────── */
+.feature-grid { display: grid; gap: 14px; margin-top: 1.4rem; }
+.feature-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.35rem; transition: border-color 0.2s; }
+.feature-card:hover { border-color: rgba(124,106,245,0.35); }
+.feature-num { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 6px; }
+.feature-num .nf { font-size: 1.1rem; }
+.feature-title { font-size: 0.97rem; font-weight: 600; margin-bottom: 0.45rem; color: var(--text); }
+.feature-desc { font-size: 0.86rem; color: var(--text2); line-height: 1.6; margin-bottom: 0.85rem; }
+.feature-items { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.feature-items li { font-size: 0.815rem; color: var(--text2); padding-left: 16px; position: relative; }
+.feature-items li::before { content: ''; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-family: var(--nf); color: var(--accent); font-size: 0.75rem; }
+
+/* ── Install steps ────────────────────────────── */
+.step { display: flex; gap: 16px; margin-bottom: 2rem; }
+.step-num { width: 30px; height: 30px; border-radius: 50%; background: var(--accent-dim); border: 1px solid rgba(124,106,245,0.28); color: var(--accent2); font-family: var(--mono); font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
+.step-body h3 { font-size: 0.92rem; font-weight: 600; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 7px; }
+.step-body h3 .nf { color: var(--accent2); font-size: 1rem; }
+.step-body p { font-size: 0.86rem; color: var(--text2); margin-bottom: 0.7rem; }
+
+/* ── Copy button ──────────────────────────────── */
+
+/* ── Keybind tables ───────────────────────────── */
+.kb-section-title { font-size: 0.76rem; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin: 2rem 0 0.7rem; display: flex; align-items: center; gap: 7px; }
+.kb-section-title .nf { font-size: 0.95rem; color: var(--accent); }
+.kb-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin: 0 0 1.4rem; }
+.kb-table th { text-align: left; padding: 7px 12px; font-size: 0.69rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); border-bottom: 1px solid var(--border); font-weight: 600; }
+.kb-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text2); vertical-align: middle; }
+.kb-table tr:last-child td { border-bottom: none; }
+.kb-table tr:hover td { background: var(--bg3); }
+kbd { font-family: var(--mono); font-size: 0.75rem; background: var(--bg4); border: 1px solid var(--border2); border-bottom-width: 2px; border-radius: 4px; padding: 2px 7px; color: var(--text); white-space: nowrap; }
+
+/* ── FAQ ──────────────────────────────────────── */
+.faq-item { border: 1px solid var(--border); border-radius: var(--radius); margin-bottom: 9px; overflow: hidden; }
+.faq-q { padding: 0.9rem 1.2rem; cursor: pointer; font-size: 0.875rem; font-weight: 500; display: flex; justify-content: space-between; align-items: center; gap: 10px; transition: background 0.14s; user-select: none; }
+.faq-q:hover { background: var(--bg3); }
+.faq-q-left { display: flex; align-items: center; gap: 9px; }
+.faq-q-left .nf { color: var(--accent2); font-size: 0.95rem; flex-shrink: 0; }
+.faq-chevron { color: var(--text3); transition: transform 0.2s; font-family: var(--nf); font-size: 0.85rem; flex-shrink: 0; }
+.faq-item.open .faq-chevron { transform: rotate(90deg); }
+.faq-a { display: none; padding: 0 1.2rem 1rem 2.8rem; font-size: 0.86rem; color: var(--text2); line-height: 1.7; border-top: 1px solid var(--border); }
+.faq-item.open .faq-a { display: block; }
+
+/* ── Credit cards ─────────────────────────────── */
+.credit-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.05rem 1.3rem; display: flex; align-items: center; gap: 13px; margin-bottom: 10px; transition: border-color 0.2s; }
+.credit-card:hover { border-color: var(--border2); }
+.avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--accent-dim); border: 1px solid rgba(124,106,245,0.28); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; color: var(--accent2); flex-shrink: 0; font-family: var(--mono); }
+.avatar.nf-av { font-family: var(--nf); font-size: 1.35rem; font-weight: 400; }
+.credit-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 2px; }
+.credit-role { font-size: 0.78rem; color: var(--text3); }
+
+/* ── Language pills ───────────────────────────── */
+.lang-pills { display: flex; gap: 10px; margin-top: 0.5rem; flex-wrap: wrap; }
+.lang-pill { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.6rem 1.1rem; font-size: 0.84rem; display: flex; align-items: center; gap: 8px; }
+
+/* ── Folder tree ──────────────────────────────── */
+.tree { font-family: var(--mono); font-size: 0.875rem; color: var(--text2); background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.5rem; line-height: 1.9; margin: 1rem 0; overflow-x: auto; white-space: pre; }
+.tree .dir     { color: var(--accent2); font-weight: 500; }
+.tree .comment { color: var(--text3); font-style: italic; }
+
+/* ── Showcase section label ───────────────────── */
+.showcase-label { font-size: 0.71rem; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 0.1em; margin: 2rem 0 1rem; display: flex; align-items: center; gap: 8px; }
+.showcase-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+
+/* ── Ko-fi support card (credits page) ────────── */
+.kofi-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  background: rgba(255, 94, 91, 0.07);
+  border: 1px solid rgba(255, 94, 91, 0.25);
+  border-radius: var(--radius);
+  padding: 1.25rem 1.4rem;
+  margin: 2rem 0 1rem;
+  flex-wrap: wrap;
+}
+
+.kofi-card-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+
+.kofi-card-icon {
+  font-size: 2rem;
+  color: #ff5e5b;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.kofi-card-title {
+  font-size: 0.97rem;
+  font-weight: 600;
+  color: #ff5e5b;
+  margin-bottom: 4px;
+}
+
+.kofi-card-sub {
+  font-size: 0.84rem;
+  color: var(--text2);
+  line-height: 1.5;
+}
+
+.kofi-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 20px;
+  background: #ff5e5b;
+  color: #fff;
+  border-radius: var(--radius);
+  font-size: 0.88rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.18s;
+  flex-shrink: 0;
+  font-family: var(--font);
+}
+.kofi-card-btn:hover {
+  background: #e04e4b;
+  color: #fff;
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+.kofi-card-btn .nf { font-size: 1rem; }
