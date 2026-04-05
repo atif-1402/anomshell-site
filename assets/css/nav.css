@@ -43,7 +43,6 @@
   display: block;
 }
 
-/* Nav links ──────────────────────────────────── */
 .nav-links {
   display: flex;
   align-items: center;
@@ -62,10 +61,14 @@
   gap: 6px;
   text-decoration: none;
 }
+
 .nav-links a:hover {
   color: var(--text);
   background: var(--bg3);
 }
+
+.nav-links a .nf,
+.theme-btn .nf { font-size: 1.24rem; }
 
 .theme-btn {
   background: var(--bg3);
@@ -170,13 +173,17 @@
 /* icon inside sidebar links */
 .sidebar-link .nf {
   color: var(--text3);
-  font-size: 1.05rem;
-  width: 18px;
+  font-size: 1.36rem;
+  width: 26px;
   text-align: center;
   flex-shrink: 0;
 }
 .sidebar-link:hover .nf,
 .sidebar-link.active .nf { color: var(--accent2); }
+
+.sidebar-link[data-page="faq"] .nf {
+  font-size: 0.9rem;
+}
 
 .sidebar-badge {
   font-size: 0.67rem;
@@ -212,7 +219,7 @@
   align-items: center;
   gap: 10px;
 }
-.section-title .nf { color: var(--accent2); font-size: 1.3rem; }
+.section-title .nf { color: var(--accent2); font-size: 1.72rem; }
 
 .section-sub {
   color: var(--text2);
@@ -229,7 +236,7 @@
   gap: 8px;
   color: var(--text);
 }
-.sub-h .nf { color: var(--accent2); font-size: 1rem; }
+.sub-h .nf { color: var(--accent2); font-size: 1.34rem; }
 
 /* ── Sidebar overlay (mobile) ─────────────────── */
 .sidebar-overlay {
@@ -308,7 +315,7 @@ body.page-leave .page-transition-overlay {
   text-decoration: none;
   color: var(--text) !important;
 }
-.kofi-btn .nf { font-size: 0.95rem; }
+.kofi-btn .nf { font-size: 1.24rem; }
 
 /* ── Ko-fi card (sidebar bottom) ─────────────── */
 .sidebar-kofi {
@@ -339,7 +346,7 @@ body.page-leave .page-transition-overlay {
   transform: translateY(-1px);
 }
 .sidebar-kofi-link .nf {
-  font-size: 1.05rem;
+  font-size: 1.34rem;
   color: var(--accent2);
   flex-shrink: 0;
 }

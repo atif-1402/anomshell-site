@@ -108,7 +108,7 @@
   font-size: 0.82rem;
   background: linear-gradient(135deg, var(--bg3), var(--bg4));
 }
-.hero-screenshot-placeholder .nf { font-size: 3.5rem; opacity: 0.2; }
+.hero-screenshot-placeholder .nf { font-size: 4.4rem; opacity: 0.28; }
 
 /* ── Showcase grid ────────────────────────────── */
 .showcase-grid {
@@ -184,7 +184,7 @@
   background: linear-gradient(135deg, var(--bg4), var(--surface));
   min-height: 180px;
 }
-.showcase-media-placeholder .nf { font-size: 2.4rem; opacity: 0.3; }
+.showcase-media-placeholder .nf { font-size: 3.2rem; opacity: 0.4; }
 
 /* play button overlay on video cards */
 .showcase-media .play-overlay {
@@ -198,7 +198,7 @@
   transition: opacity 0.2s;
 }
 .showcase-card:hover .play-overlay { opacity: 1; }
-.play-overlay .nf { font-size: 2.5rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
+.play-overlay .nf { font-size: 3.3rem; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,0.5); }
 
 /* video type badge */
 .media-badge {
@@ -229,7 +229,7 @@
   align-items: center;
   gap: 6px;
 }
-.showcase-card-title .nf { color: var(--accent2); font-size: 0.9rem; }
+.showcase-card-title .nf { color: var(--accent2); font-size: 1.24rem; }
 .showcase-card-desc { font-size: 0.78rem; color: var(--text3); }
 
 /* ── Lightbox / fullscreen viewer ─────────────── */

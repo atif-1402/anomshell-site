@@ -18,11 +18,12 @@
 .btn-ghost { background: var(--bg3); color: var(--text); border: 1px solid var(--border2); }
 .btn-ghost:hover { background: var(--bg4); color: var(--text); }
 .btn-sm { padding: 7px 14px; font-size: 0.82rem; }
+.btn .nf { font-size: 1.24rem; }
 
 /* ── Feature pills ────────────────────────────── */
 .feat-pills { display: flex; flex-wrap: wrap; gap: 9px; justify-content: center; margin: 2.5rem 0; }
 .pill { padding: 7px 15px; border-radius: 20px; font-size: 0.83rem; font-weight: 500; border: 1px solid; display: inline-flex; align-items: center; gap: 7px; }
-.pill .nf { font-size: 0.95rem; }
+.pill .nf { font-size: 1.28rem; }
 .pill-purple { background: var(--accent-dim); border-color: rgba(124,106,245,0.2); color: var(--accent2); }
 .pill-green  { background: var(--green-dim);  border-color: rgba(74,222,128,0.2);  color: var(--green);  }
 .pill-teal   { background: var(--teal-dim);   border-color: rgba(45,212,191,0.2);  color: var(--teal);   }
@@ -32,7 +33,7 @@
 
 /* ── Callout boxes ────────────────────────────── */
 .callout { border-radius: var(--radius); padding: 1rem 1.2rem; margin: 1.4rem 0; display: flex; gap: 10px; align-items: flex-start; font-size: 0.875rem; }
-.callout .nf { font-size: 1.05rem; flex-shrink: 0; margin-top: 1px; }
+.callout .nf { font-size: 1.4rem; flex-shrink: 0; margin-top: 1px; }
 .callout-warn   { background: var(--amber-dim);  border: 1px solid rgba(245,158,11,0.25);  color: var(--amber);  }
 .callout-info   { background: var(--accent-dim); border: 1px solid rgba(124,106,245,0.22); color: var(--accent2);}
 .callout-tip    { background: var(--green-dim);  border: 1px solid rgba(74,222,128,0.22);  color: var(--green);  }
@@ -43,7 +44,7 @@
 .feature-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.35rem; transition: border-color 0.2s; }
 .feature-card:hover { border-color: rgba(124,106,245,0.35); }
 .feature-num { font-family: var(--mono); font-size: 0.72rem; color: var(--accent); font-weight: 700; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 6px; }
-.feature-num .nf { font-size: 1.1rem; }
+.feature-num .nf { font-size: 1.48rem; }
 .feature-title { font-size: 0.97rem; font-weight: 600; margin-bottom: 0.45rem; color: var(--text); }
 .feature-desc { font-size: 0.86rem; color: var(--text2); line-height: 1.6; margin-bottom: 0.85rem; }
 .feature-items { list-style: none; display: flex; flex-direction: column; gap: 4px; }
@@ -54,14 +55,14 @@
 .step { display: flex; gap: 16px; margin-bottom: 2rem; }
 .step-num { width: 30px; height: 30px; border-radius: 50%; background: var(--accent-dim); border: 1px solid rgba(124,106,245,0.28); color: var(--accent2); font-family: var(--mono); font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 2px; }
 .step-body h3 { font-size: 0.92rem; font-weight: 600; margin-bottom: 0.35rem; display: flex; align-items: center; gap: 7px; }
-.step-body h3 .nf { color: var(--accent2); font-size: 1rem; }
+.step-body h3 .nf { color: var(--accent2); font-size: 1.34rem; }
 .step-body p { font-size: 0.86rem; color: var(--text2); margin-bottom: 0.7rem; }
 
 /* ── Copy button ──────────────────────────────── */
 
 /* ── Keybind tables ───────────────────────────── */
 .kb-section-title { font-size: 0.76rem; font-weight: 600; color: var(--text3); text-transform: uppercase; letter-spacing: 0.08em; margin: 2rem 0 0.7rem; display: flex; align-items: center; gap: 7px; }
-.kb-section-title .nf { font-size: 0.95rem; color: var(--accent); }
+.kb-section-title .nf { font-size: 1.28rem; color: var(--accent); }
 .kb-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin: 0 0 1.4rem; }
 .kb-table th { text-align: left; padding: 7px 12px; font-size: 0.69rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--text3); border-bottom: 1px solid var(--border); font-weight: 600; }
 .kb-table td { padding: 8px 12px; border-bottom: 1px solid var(--border); color: var(--text2); vertical-align: middle; }
@@ -74,8 +75,8 @@ kbd { font-family: var(--mono); font-size: 0.75rem; background: var(--bg4); bord
 .faq-q { padding: 0.9rem 1.2rem; cursor: pointer; font-size: 0.875rem; font-weight: 500; display: flex; justify-content: space-between; align-items: center; gap: 10px; transition: background 0.14s; user-select: none; }
 .faq-q:hover { background: var(--bg3); }
 .faq-q-left { display: flex; align-items: center; gap: 9px; }
-.faq-q-left .nf { color: var(--accent2); font-size: 0.95rem; flex-shrink: 0; }
-.faq-chevron { color: var(--text3); transition: transform 0.2s; font-family: var(--nf); font-size: 0.85rem; flex-shrink: 0; }
+.faq-q-left .nf { color: var(--accent2); font-size: 1.28rem; flex-shrink: 0; }
+.faq-chevron { color: var(--text3); transition: transform 0.2s; font-family: var(--nf); font-size: 1.16rem; flex-shrink: 0; }
 .faq-item.open .faq-chevron { transform: rotate(90deg); }
 .faq-a { display: none; padding: 0 1.2rem 1rem 2.8rem; font-size: 0.86rem; color: var(--text2); line-height: 1.7; border-top: 1px solid var(--border); }
 .faq-item.open .faq-a { display: block; }
@@ -84,13 +85,14 @@ kbd { font-family: var(--mono); font-size: 0.75rem; background: var(--bg4); bord
 .credit-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.05rem 1.3rem; display: flex; align-items: center; gap: 13px; margin-bottom: 10px; transition: border-color 0.2s; }
 .credit-card:hover { border-color: var(--border2); }
 .avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--accent-dim); border: 1px solid rgba(124,106,245,0.28); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; color: var(--accent2); flex-shrink: 0; font-family: var(--mono); }
-.avatar.nf-av { font-family: var(--nf); font-size: 1.35rem; font-weight: 400; }
+.avatar.nf-av { font-family: var(--nf); font-size: 1.8rem; font-weight: 400; }
 .credit-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 2px; }
 .credit-role { font-size: 0.78rem; color: var(--text3); }
 
 /* ── Language pills ───────────────────────────── */
 .lang-pills { display: flex; gap: 10px; margin-top: 0.5rem; flex-wrap: wrap; }
 .lang-pill { background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-sm); padding: 0.6rem 1.1rem; font-size: 0.84rem; display: flex; align-items: center; gap: 8px; }
+.lang-pill .nf { font-size: 1.36rem; }
 
 /* ── Folder tree ──────────────────────────────── */
 .tree { font-family: var(--mono); font-size: 0.875rem; color: var(--text2); background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.2rem 1.5rem; line-height: 1.9; margin: 1rem 0; overflow-x: auto; white-space: pre; }
@@ -124,7 +126,7 @@ kbd { font-family: var(--mono); font-size: 0.75rem; background: var(--bg4); bord
 }
 
 .kofi-card-icon {
-  font-size: 2rem;
+  font-size: 2.55rem;
   color: #ff5e5b;
   flex-shrink: 0;
   margin-top: 2px;
@@ -165,4 +167,4 @@ kbd { font-family: var(--mono); font-size: 0.75rem; background: var(--bg4); bord
   text-decoration: none;
   transform: translateY(-1px);
 }
-.kofi-card-btn .nf { font-size: 1rem; }
+.kofi-card-btn .nf { font-size: 1.34rem; }
