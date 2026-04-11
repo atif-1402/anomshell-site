@@ -46,7 +46,7 @@ function buildNav(root) {
           '<a class="sidebar-link" href="' + p + 'showcase.html" data-page="showcase">',
             '<span class="nf">&#xf03e;</span> Showcase</a>',
           '<a class="sidebar-link" href="' + p + 'credits.html" data-page="credits">',
-            '<span class="nf">&#xf004;</span> Credits</a>',
+            '<span class="nf">&#xf004;</span> Contributors</a>',
         '</div>',
 
         '<div class="sidebar-section">',

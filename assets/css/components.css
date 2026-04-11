@@ -82,10 +82,17 @@ kbd { font-family: var(--mono); font-size: 0.75rem; background: var(--bg4); bord
 .faq-item.open .faq-a { display: block; }
 
 /* ── Credit cards ─────────────────────────────── */
-.credit-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.05rem 1.3rem; display: flex; align-items: center; gap: 13px; margin-bottom: 10px; transition: border-color 0.2s; }
-.credit-card:hover { border-color: var(--border2); }
+.credits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px;
+  margin-top: 1rem;
+}
+.credit-card { background: var(--bg2); border: 1px solid var(--border); border-radius: var(--radius); padding: 0.95rem 1rem; display: flex; align-items: center; gap: 12px; margin-bottom: 0; transition: border-color 0.2s, transform 0.2s; min-height: 78px; }
+.credit-card:hover { border-color: var(--border2); transform: translateY(-1px); }
 .avatar { width: 42px; height: 42px; border-radius: 50%; background: var(--accent-dim); border: 1px solid rgba(124,106,245,0.28); display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; color: var(--accent2); flex-shrink: 0; font-family: var(--mono); }
 .avatar.nf-av { font-family: var(--nf); font-size: 1.8rem; font-weight: 400; }
+.avatar-img { width: 100%; height: 100%; border-radius: 50%; object-fit: cover; display: block; }
 .credit-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 2px; }
 .credit-role { font-size: 0.78rem; color: var(--text3); }
 

@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
 <title>Install — anomshell</title>
 <link rel="stylesheet" href="../assets/css/base.css">
 <link rel="stylesheet" href="../assets/css/nav.css">
@@ -74,13 +75,24 @@ chmod +x ~/.local/bin/wb-kill.sh</code></pre>
         <p>Or press <kbd>Super</kbd> + <kbd>Shift</kbd> + <kbd>Q</kbd></p>
       </div>
     </div>
+    <div class="step">
+      <div class="step-num">8</div>
+      <div class="step-body">
+        <h3><span class="nf">&#xf135;</span> Start Quickshell at startup (optional)</h3>
+        <p>Run the following command to start Quickshell and kill Waybar at startup:</p>
+        <pre><code>cat >> ./.config/hypr/autostart.conf << 'EOF'
+exec-once = ~/.local/bin/wb-kill.sh
+exec-once = ~/.local/bin/qs.sh
+EOF</code></pre>
+      </div>
+    </div>
     <div class="divider"></div>
     <h3 class="sub-h"><span class="nf" style="color:var(--red)">&#xf188;</span> Troubleshooting</h3>
     <pre><code># Verify quickshell runs
 quickshell
 
 # Check IPC
-quickshell ipc list
+quickshell ipc show
 
 # Verify scripts exist
 ls -l ~/.local/bin</code></pre>
